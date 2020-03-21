@@ -18,9 +18,46 @@ font-family: 'Play', sans-serif;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
+.halalburger {
+  display:none;
+}
+
+@media only screen and (max-width: 1050px) {
   body {
     background-color: lightblue;
+  }
+
+  .halalburger {
+    position: absolute;
+    top: 40px;
+    display: inline-block;
+    color: white;
+  }
+
+  .halalburger:hover {
+    cursor: pointer;
+  }
+
+  .nav_bar .drop_parent {
+    display: none;
+  }
+
+  .nav_bar {
+    width: 100%;
+  }
+
+  .home_button {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .nav_bar .nav-item {
+    display: none;
+  }
+
+  .dropdown_group a {
+    width: 100%;
   }
 }
 

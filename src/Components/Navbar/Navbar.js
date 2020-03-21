@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckSquare, faCoffee , faCaretSquareDown , faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCheckSquare, faCoffee , faCaretSquareDown , faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -36,6 +36,10 @@ export default function Navbar() {
           </div>
 
         </div>
+
+        <span class="halalburger">
+          <FontAwesomeIcon icon={faBars} size="3x" />
+        </span>
 
         <a class="nav-item hvr-underline-from-left" href="#">
           EVENTS

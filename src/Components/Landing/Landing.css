@@ -9,6 +9,18 @@ font-family: 'Righteous', cursive;
 font-family: 'Play', sans-serif;
 */
 
+
+@media only screen and (max-width: 1280px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .top_banner {
+    display: none;
+  }
+
+}
+
 .top_banner Button {
 
   position: absolute;
