@@ -1,9 +1,16 @@
-import React from 'react'
+import React , { Component } from 'react';
 
-export default function Events() {
+class Events extends Component {
 
-  return(
-    <h1> FINALLY </h1>
-  );
+  render() {
 
+    return(
+
+      <h1> FINALLY </h1>
+
+    );
+
+  }
 }
+
+export default Events;
