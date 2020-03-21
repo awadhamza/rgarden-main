@@ -8,23 +8,37 @@ font-family: 'Indie Flower', cursive;
 font-family: 'Righteous', cursive;
 font-family: 'Play', sans-serif;
 */
-
+/* rgba(165, 217, 166, 1) */
 .nav_bar {
-  background-color: rgba(165, 217, 166, 1);
+  background-color: rgba(39, 83, 171, 1);
   padding-bottom: 5px;
-  padding-top: 7.5px;
+  padding-top: 5px;
   text-align: center;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
 
 .home_button {
   display: inline-block;
   margin-right: 50px;
+  margin-bottom: 5px;
 }
 
 .about-nav {
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 47px;
+}
 
-    font-family: 'Anton', sans-serif;
-      font-size: 47px;
+.about-nav:hover {
+  color: yellow;
+  transition: 0.5s;
 }
 
 .home_button a {
@@ -53,7 +67,7 @@ font-family: 'Play', sans-serif;
 
 .nav-item:hover {
     transition: 0.25s;
-    color: darkgreen;
+    color: yellow;
 }
 
 .drop_parent {
@@ -65,12 +79,13 @@ font-family: 'Play', sans-serif;
 }
 
 .dropdown_group {
-  background-color: rgba(136, 186, 137, 1);
+  background-color: rgba(116, 165, 237, 1);
   border-radius: 10px;
   position: absolute;
   top: 100px;
   left: 10px;
-  display: none
+  z-index: 99999;
+  display: none;
 }
 
 .dropdown_group a {
@@ -83,9 +98,9 @@ font-family: 'Play', sans-serif;
   color: black;
   font-family: 'Sen', sans-serif;
 }
-
+/* 247, 255, 135 */
 .dropdown_group a:hover {
-  background-color: rgba(165, 217, 166, 1);
+  background-color: rgba(247, 255, 135, 1);
   border-radius: 10px;
 }
 
@@ -116,7 +131,7 @@ font-family: 'Play', sans-serif;
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #6e5144;
+  background: yellow;
   height: 3px;
   -webkit-transition-property: right;
   transition-property: right;

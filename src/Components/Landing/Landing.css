@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Indie+Flower|Play|Righteous|Roboto|Sen&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+*/
+
+.top_banner Button {
+
+  position: absolute;
+  top: 23vh;
+  left: 6vw;
+  text-shadow: 3px 3px #000;
+}
+
+.top_banner img {
+  padding-top: 5px;
+  width: 75vw;
+  max-height: 55vh;
+  object-fit: cover;
+}
+
+.top_banner {
+  margin: 0 auto;
+  width: 75vw;
+  position: relative;
+}
+
+.big_text {
+  background-color: rgba(255,0,0,0.5);
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 85px;
+  position: absolute;
+  top: 5vh;
+  left: 2.5vw;
+  text-shadow: 3px 3px #000;
+}
+
+.small_text {
+  font-size: 45px;
+  position: absolute;
+  top: 16vh;
+  left: 4vw;
+  text-shadow: 3px 3px #000;
+}
+
+.banner_text {
+  color: white;
+  font-family: 'Sen', sans-serif;
+}
+
+.backgroundImage {
+  background-image: url(../../Media/garden6.jpeg);
+  height: 55vh;
+  max-width: 75vw;
+  background-size: 125vh;
+  object-fit: cover;
+}
