@@ -36,7 +36,7 @@ export default function Landing() {
             className={classes.button}
             startIcon={<DoubleArrowIcon />}
           >
-            find out more
+            how to get started
           </Button>
         </div>
       </div>

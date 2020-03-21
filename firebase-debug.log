@@ -1,0 +1,22 @@
+[debug] [2020-03-21T05:47:47.354Z] ----------------------------------------------------------------------
+[debug] [2020-03-21T05:47:47.358Z] Command:       D:\nodejs\node.exe C:\Users\hamza\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting
+[debug] [2020-03-21T05:47:47.358Z] CLI Version:   7.15.1
+[debug] [2020-03-21T05:47:47.358Z] Platform:      win32
+[debug] [2020-03-21T05:47:47.358Z] Node Version:  v10.16.3
+[debug] [2020-03-21T05:47:47.359Z] Time:          Fri Mar 20 2020 22:47:47 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-03-21T05:47:47.359Z] ----------------------------------------------------------------------
+[debug] [2020-03-21T05:47:47.359Z] 
+[debug] [2020-03-21T05:47:47.370Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-21T05:47:47.370Z] > authorizing via signed-in user
+[debug] [2020-03-21T05:47:47.370Z] [iam] checking project rgarden-a7062 for permissions ["firebase.projects.get"]
+[debug] [2020-03-21T05:47:47.372Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/rgarden-a7062:testIamPermissions  
+
+[debug] [2020-03-21T05:47:47.718Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-21T05:47:47.719Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rgarden-a7062  
+ 
+[debug] [2020-03-21T05:47:47.945Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-21T05:47:47.947Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/rgarden-a7062/webApps/-/config  
+ 
+[debug] [2020-03-21T05:47:48.294Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: (build)
+[info] +  hosting: Local server: http://localhost:5000
