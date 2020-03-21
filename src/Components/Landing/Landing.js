@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import backgroundImage from '../../Media/garden6.jpeg';
+import backgroundImage from '../../Media/garden1.jpeg';
 import './Landing.css';
 import Button from '@material-ui/core/Button';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
