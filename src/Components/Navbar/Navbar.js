@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCheckSquare, faCoffee , faCaretSquareDown , faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
+import Events from '../Events/Events';
 
 export default function Navbar() {
 
@@ -17,13 +18,17 @@ export default function Navbar() {
     <Router>
 
       <div class="nav_bar">
+
         <div class="home_button">
           <Link class="hvr-float-shadow" to="/">R'Garden</Link>
         </div>
+
         <div class="drop_parent">
+
           <span class="about-nav hvr-underline-from-left">
             <FontAwesomeIcon icon={faCaretSquareDown} /> ABOUT
           </span>
+
           <div class="dropdown_group">
             <Link class="hvr-grow-rotate" to="/history">History</Link>
             <br/>
@@ -41,38 +46,26 @@ export default function Navbar() {
           <FontAwesomeIcon icon={faBars} size="3x" />
         </span>
 
-        <a class="nav-item hvr-underline-from-left" href="#">
+        <Link class="nav-item hvr-underline-from-left" to="/events">
           EVENTS
-        </a>
-        <a class="nav-item hvr-underline-from-left" href="#">CHECK IN</a>
-        <a class="nav-item hvr-underline-from-left" href="#">YOUR PLOT</a>
+        </Link>
+
+        <Link class="nav-item hvr-underline-from-left" to="/checkin">
+          CHECK IN
+        </Link>
+
+        <Link class="nav-item hvr-underline-from-left" to="/yourplot">
+          YOUR PLOT
+        </Link>
+
       </div>
 
     <Switch>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/users">
-        <Users />
-      </Route>
-      <Route path="/">
-        <Landing />
-      </Route>
+      <Route exact path="/" component={Landing} />
+      <Route exact path="/events" component={Events} />
     </Switch>
+
   </Router>
 
   );
-}
-
-
-function Home() {
-  return <Landing />;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
