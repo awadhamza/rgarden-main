@@ -27,6 +27,12 @@ export default function Navbar() {
 
   }
 
+  function handleMobileAbout() {
+
+    document.getElementsByClassName("secret_formula")[0].style.display="block";
+
+  }
+
   function handleChoice() {
     document.getElementsByClassName("secret_formula")[0].style.display = "none";
   }
@@ -75,38 +81,39 @@ export default function Navbar() {
           <FontAwesomeIcon id="ham-icon" icon={faBars} size="3x" />
         </span>
 
-        <div class="secret_formula" onClick={handleChoice}>
+        <div class="secret_formula">
 
-        <div class="mobile_parent">
+          <div class="mobile_parent">
 
-          <span class="about-nav hvr-underline-from-left">
-            <FontAwesomeIcon icon={faCaretSquareRight} /> ABOUT
-          </span>
+            <span class="about-nav hvr-underline-from-left" onClick={handleMobileAbout}>
+              <FontAwesomeIcon icon={faCaretSquareRight} /> ABOUT
+            </span>
 
-          <div class="dropdown_group">
-            <Link class="hvr-grow-rotate" to="/history">History</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/hoursandlocation">Time & Place</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/media">Media</Link>
-            <br/>
+            <div class="dropdown_group" onClick={handleChoice}>
+              <Link class="hvr-grow-rotate" to="/history">History</Link>
+              <br/>
+              <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
+              <br/>
+              <Link class="hvr-grow-rotate" to="/hoursandlocation">Time & Place</Link>
+              <br/>
+              <Link class="hvr-grow-rotate" to="/media">Media</Link>
+              <br/>
+            </div>
+
           </div>
-
-        </div>
-
-          <Link class="ham-item hvr-underline-from-left" to="/events">
-            EVENTS
-          </Link>
-          <br/><br/>
-          <Link class="ham-item hvr-underline-from-left" to="/checkin">
-            CHECK IN
-          </Link>
-          <br/><br/>
-          <Link class="ham-item hvr-underline-from-left" to="/yourplot">
-            YOUR PLOT
-          </Link>
+          <div onClick={handleChoice}>
+            <Link class="ham-item hvr-underline-from-left" to="/events">
+              EVENTS
+            </Link>
+            <br/><br/>
+            <Link class="ham-item hvr-underline-from-left" to="/checkin">
+              CHECK IN
+            </Link>
+            <br/><br/>
+            <Link class="ham-item hvr-underline-from-left" to="/yourplot">
+              YOUR PLOT
+            </Link>
+          </div>
         </div>
 
         <Link class="nav-item hvr-underline-from-left" to="/events">
