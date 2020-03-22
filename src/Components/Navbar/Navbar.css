@@ -45,13 +45,18 @@ font-family: 'Play', sans-serif;
   color: lightyellow;
 }
 
+@media only screen and (max-width: 360px) {
+  .halalburger {
+  }
+}
+
 @media only screen and (min-width: 1051px) {
   .secret_formula {
     display: none;
   }
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) and (min-width: 361px) {
   body {
     background-color: lightblue;
   }

@@ -35,6 +35,7 @@ export default function Navbar() {
 
   function handleChoice() {
     document.getElementsByClassName("secret_formula")[0].style.display = "none";
+
   }
 
   function handleScreenWidthChange() {
@@ -64,7 +65,7 @@ export default function Navbar() {
             <FontAwesomeIcon icon={faCaretSquareDown} /> ABOUT
           </span>
 
-          <div class="dropdown_group">
+          <div class="dropdown_group" onClick={handleChoice}>
             <Link class="hvr-grow-rotate" to="/history">History</Link>
             <br/>
             <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
