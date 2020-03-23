@@ -47,17 +47,21 @@ export default function Landing() {
 
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            <div class="landing-icons">
+            <div class="card">
+              <div class="card_title">Our Plants & Crops</div>
               <img src={plant_icon} />
+              <div class="card_desc">R'Garden grows a variety of different plants! </div>
             </div>
           </Grid>
           <Grid item xs={4}>
-          <div class="landing-icons">
+          <div class="card">
+            <div class="card_title">R'Team</div>
             <img src={plant_icon} />
           </div>
           </Grid>
           <Grid item xs={4}>
-          <div class="landing-icons">
+          <div class="card">
+            <div class="card_title">Activities</div>
             <img src={plant_icon} />
           </div>
           </Grid>
