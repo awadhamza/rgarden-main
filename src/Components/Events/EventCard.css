@@ -1,0 +1,42 @@
+.main_card {
+  width: 75vw;
+  margin: 0 auto;
+  background-color: rgba(245, 245, 245, 0.8);
+  border-radius: 100px;
+}
+
+@media only screen and (max-width: 500px){
+  h2 {
+    display: none;
+  }
+}
+
+.root {
+  flex-grow: 1;
+}
+
+h1 {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+.line {
+  height: 1px;
+  background-color: black;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin: 0 auto;
+  width: 80%;
+  font-style: italic;
+  padding-bottom: 10px;
+}
+
+.paper {
+  background-color: rgba(232, 232, 232, 1);
+  padding: 1px;
+  text-align: center;
+  color: black;
+}

@@ -5,7 +5,7 @@ import Landing from './Components/Landing/Landing';
 
 export default function App() {
   return (
-        <div>
+        <div class="outermost">
           <Navbar />
         </div>
   );

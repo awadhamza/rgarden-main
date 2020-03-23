@@ -10,6 +10,7 @@ font-family: 'Play', sans-serif;
 */
 /* rgba(165, 217, 166, 1) */
 .nav_bar {
+  /* background-image: url(../../Media/wood.jpg); */
   background-color: rgba(39, 83, 171, 1);
   padding-bottom: 5px;
   padding-top: 5px;
@@ -58,7 +59,7 @@ font-family: 'Play', sans-serif;
 
 @media only screen and (max-width: 1050px) and (min-width: 361px) {
   body {
-    background-color: lightblue;
+    background-color: black;
   }
 
   .halalburger {

@@ -10,6 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCaretSquareRight, faCheckSquare, faCoffee , faCaretSquareDown , faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css';
 import Events from '../Events/Events';
+import CheckIn from '../CheckIn/CheckIn';
+import Footer from '../Footer/Footer';
 
 export default function Navbar() {
 
@@ -134,9 +136,11 @@ export default function Navbar() {
     <Switch>
       <Route exact path="/" component={Landing} />
       <Route exact path="/events" component={Events} />
+      <Route exact path="/checkin" component={CheckIn} />
     </Switch>
 
   </Router>
+
 
   );
 }
