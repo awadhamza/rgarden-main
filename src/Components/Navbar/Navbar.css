@@ -29,9 +29,9 @@ font-family: 'Play', sans-serif;
 .secret_formula {
   display: none;
   position: absolute;
-  background-color: rgba(130,180,255,1);
+  background-color: rgba(39, 83, 171,0.3);
   padding: 20px;
-  top: 128px;
+  top: 120px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 50px;
 }
@@ -47,19 +47,19 @@ font-family: 'Play', sans-serif;
 .ham-item:hover{
   color: lightyellow;
 }
-
-@media only screen and (max-width: 360px) {
-  .halalburger {
-  }
-}
-
 @media only screen and (min-width: 1051px) {
   .secret_formula {
     display: none;
   }
 }
 
-@media only screen and (max-width: 1050px) and (min-width: 361px) {
+@media only screen and (max-width: 1050px) {
+
+  .nav_bar {
+    width: 100%;
+    position: fixed !important;
+  }
+
   body {
     background-color: black;
   }
@@ -88,9 +88,11 @@ font-family: 'Play', sans-serif;
 
   .nav_bar {
     width: 100%;
+    border-radius: 0;
   }
 
-  .home_button {
+  .home_button a {
+    font-size: 70px !important;
     text-align: left;
     margin-left: 80px;
     padding-left: 0;

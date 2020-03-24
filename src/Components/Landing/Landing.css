@@ -11,6 +11,17 @@ font-family: 'Righteous', cursive;
 font-family: 'Play', sans-serif;
 */
 
+.switcher button {
+  background-color: rgba(0,0,0,0);
+  border: 0;
+}
+
+#hi {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
 .card_desc {
   background-color: rgba(255,255,255,0.7);
   color: black;
@@ -57,6 +68,26 @@ font-family: 'Play', sans-serif;
     font-family: 'IM Fell Double Pica SC', serif;
     text-align: center;
     letter-spacing: 15px;
+}
+
+@media only screen and (max-width: 1051px) {
+
+  #hi {
+    display: none;
+  }
+
+  .mainT {
+    font-size: 70px;
+    letter-spacing: 0;
+    margin-top: 80px !important;
+    text-shadow: 3px 3px black;
+  }
+
+  .subT {
+    font-size: 50px;
+    text-shadow: 3px 3px black;
+    margin-bottom: 20px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {

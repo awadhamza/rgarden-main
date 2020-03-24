@@ -6,6 +6,10 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import plant_icon from '../../Media/plant-icon.png';
+import team_icon from '../../Media/team-icon.png';
+import activities_icon from '../../Media/activities-icon.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagic } from '@fortawesome/free-solid-svg-icons';
 
 // <div class="top_banner">
 //   <img src={backgroundImage} />
@@ -30,18 +34,32 @@ import plant_icon from '../../Media/plant-icon.png';
 //   </Button>
 // </div>
 
+function changeBackground() {
+  let imagePick = Math.floor(Math.random() * 6) + 1;
+  if(imagePick == 4){
+    let image = '../../Media/garden' + imagePick + '.jpg';
+    let package1 = "url(" + image + ")";
+    document.getElementsByClassName("outermost")[0].style.backgroundImage = package1;
+    alert(package1);
+    return;
+  }
+  let image = '../../Media/garden' + imagePick + '.jpeg';
+  let package1 = "url(" + image + ")";
+  document.getElementsByClassName("outermost")[0].style.backgroundImage = package1;
+  alert(package1);
+}
+
 export default function Landing() {
 
-  const useStyles = makeStyles(theme => ({
-    button: {
-      margin: theme.spacing(1),
-    },
-  }));
-
-  const classes = useStyles();
+  
 
   return(
       <div class="main">
+        <div class="switcher">
+          <button onClick={changeBackground}>
+            <FontAwesomeIcon id="hi" size="3x" icon={faMagic} />
+          </button>
+        </div>
         <div class="mainT"> R'Garden? </div>
         <div class="subT">Yes. <b>YOURS</b> too! </div>
 
@@ -56,13 +74,13 @@ export default function Landing() {
           <Grid item xs={4}>
           <div class="card">
             <div class="card_title">R'Team</div>
-            <img src={plant_icon} />
+            <img src={team_icon} />
           </div>
           </Grid>
           <Grid item xs={4}>
           <div class="card">
             <div class="card_title">Activities</div>
-            <img src={plant_icon} />
+            <img src={activities_icon} />
           </div>
           </Grid>
         </Grid>

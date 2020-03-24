@@ -16,8 +16,10 @@
     "hover.css": "^2.3.2",
     "material-ui": "^0.20.2",
     "react": "^16.13.0",
+    "react-awesome-button": "^6.5.1",
     "react-dom": "^16.13.0",
     "react-grid-layout": "^0.18.3",
+    "react-native-really-awesome-button": "^1.6.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
   },
