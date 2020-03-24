@@ -18,6 +18,8 @@ import img5 from '../../Media/farm1.jpeg';
 import img6 from '../../Media/garden6.jpeg';
 import img7 from '../../Media/farm2.jpeg';
 import img8 from '../../Media/farm3.jpeg';
+import Tilt from 'react-tilt';
+import Footer from '../Footer/Footer';
 
 
 // <div class="top_banner">
@@ -64,28 +66,28 @@ class Landing extends Component {
     this.state.imgNum = imagePick;
 
     if(imagePick == 1){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img1 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img1 + ')';
     }
     if(imagePick == 2){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img2 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img2 + ')';
     }
     if(imagePick == 3){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img3 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img3 + ')';
     }
     if(imagePick == 4){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img4 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img4 + ')';
     }
     if(imagePick == 5){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img5 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img5 + ')';
     }
     if(imagePick == 6){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img6 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img6 + ')';
     }
     if(imagePick == 7){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img7 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img7 + ')';
     }
     if(imagePick == 8){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'url(' + img8 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img8 + ')';
     }
 
   }
@@ -101,27 +103,43 @@ class Landing extends Component {
           <div class="mainT"> R'Garden? </div>
           <div class="subT">Yes. <b>YOURS</b> too! </div>
 
+
+
           <Grid container spacing={3}>
             <Grid item xs={4}>
-              <div class="card">
-                <div class="card_title">Our Plants & Crops</div>
-                <img src={plant_icon} />
-                <div class="card_desc">R'Garden grows a variety of different plants! </div>
-              </div>
+              <img src={plant_icon} />
+              <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
+               <div class="card">
+                 <div class="card_title">Our Plants & Crops</div>
+                 Here, at the R'Garden, we grow organic.
+               </div>
+              </Tilt>
             </Grid>
             <Grid item xs={4}>
-            <div class="card">
-              <div class="card_title">R'Team</div>
               <img src={team_icon} />
-            </div>
+              <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
+               <div class="card">
+                 <div class="card_title">Meet R'Team</div>
+                 Blah blah blahblah blahblah blahblah blahblah blahblah blah
+               </div>
+              </Tilt>
             </Grid>
             <Grid item xs={4}>
-            <div class="card">
-              <div class="card_title">Activities</div>
               <img src={activities_icon} />
-            </div>
+              <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
+               <div class="card">
+                 <div class="card_title">Events & Activities</div>
+                 blah blahblah blahblah blahblah blahblah blahblah blahblah blahblah blah
+               </div>
+              </Tilt>
             </Grid>
           </Grid>
+
+          <div class="bot_land">
+            Where to get started:
+          </div>
+
+          <Footer />
 
         </div>
     );
