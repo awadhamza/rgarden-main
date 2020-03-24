@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Landing from '../Landing/Landing';
 import {
   BrowserRouter as Router,
@@ -13,9 +13,12 @@ import Events from '../Events/Events';
 import CheckIn from '../CheckIn/CheckIn';
 import Footer from '../Footer/Footer';
 
-export default function Navbar() {
+class Navbar extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  function handleBurger() {
+  handleBurger() {
     //alert('CLICKED!');
     var div = document.getElementsByClassName("secret_formula")[0];
 
@@ -29,18 +32,18 @@ export default function Navbar() {
 
   }
 
-  function handleMobileAbout() {
+  handleMobileAbout() {
 
     document.getElementsByClassName("secret_formula")[0].style.display="block";
 
   }
 
-  function handleChoice() {
+  handleChoice() {
     document.getElementsByClassName("secret_formula")[0].style.display = "none";
 
   }
 
-  function handleScreenWidthChange() {
+  handleScreenWidthChange() {
 
     var div = document.getElementsByClassName("secret_formula")[0];
 
@@ -51,48 +54,22 @@ export default function Navbar() {
     }
   }
 
-  return (
+  render() {
+    return (
+      <Router>
+        <div class="nav_bar">
 
-    <Router>
-      {handleScreenWidthChange}
-      <div class="nav_bar">
-
-        <div class="home_button">
-          <Link class="hvr-float-shadow" to="/">R'Garden</Link>
-        </div>
-
-        <div class="drop_parent">
-
-          <span class="about-nav hvr-underline-from-left">
-            <FontAwesomeIcon icon={faCaretSquareDown} /> ABOUT
-          </span>
-
-          <div class="dropdown_group" onClick={handleChoice}>
-            <Link class="hvr-grow-rotate" to="/history">History</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/hoursandlocation">Time & Place</Link>
-            <br/>
-            <Link class="hvr-grow-rotate" to="/media">Media</Link>
-            <br/>
+          <div class="home_button" onClick={this.handleChoice}>
+            <Link class="hvr-float-shadow" to="/">R'Garden</Link>
           </div>
 
-        </div>
+          <div class="drop_parent">
 
-        <span class="halalburger" onClick={handleBurger}>
-          <FontAwesomeIcon id="ham-icon" icon={faBars} size="3x" />
-        </span>
-
-        <div class="secret_formula">
-
-          <div class="mobile_parent">
-
-            <span class="about-nav hvr-underline-from-left" onClick={handleMobileAbout}>
-              <FontAwesomeIcon icon={faCaretSquareRight} /> ABOUT
+            <span class="about-nav hvr-underline-from-left">
+              <FontAwesomeIcon icon={faCaretSquareDown} /> ABOUT
             </span>
 
-            <div class="dropdown_group" onClick={handleChoice}>
+            <div class="dropdown_group" onClick={this.handleChoice}>
               <Link class="hvr-grow-rotate" to="/history">History</Link>
               <br/>
               <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
@@ -104,43 +81,71 @@ export default function Navbar() {
             </div>
 
           </div>
-          <div onClick={handleChoice}>
-            <Link class="ham-item hvr-underline-from-left" to="/events">
-              EVENTS
-            </Link>
-            <br/><br/>
-            <Link class="ham-item hvr-underline-from-left" to="/checkin">
-              CHECK IN
-            </Link>
-            <br/><br/>
-            <Link class="ham-item hvr-underline-from-left" to="/yourplot">
-              YOUR PLOT
-            </Link>
+
+          <span class="halalburger" onClick={this.handleBurger}>
+            <FontAwesomeIcon id="ham-icon" icon={faBars} size="3x" />
+          </span>
+
+          <div class="secret_formula">
+
+            <div class="mobile_parent">
+
+              <span class="about-nav hvr-underline-from-left" onClick={this.handleMobileAbout}>
+                <FontAwesomeIcon icon={faCaretSquareRight} /> ABOUT
+              </span>
+
+              <div class="dropdown_group" onClick={this.handleChoice}>
+                <Link class="hvr-grow-rotate" to="/history">History</Link>
+                <br/>
+                <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
+                <br/>
+                <Link class="hvr-grow-rotate" to="/hoursandlocation">Time & Place</Link>
+                <br/>
+                <Link class="hvr-grow-rotate" to="/media">Media</Link>
+                <br/>
+              </div>
+
+            </div>
+            <div onClick={this.handleChoice}>
+              <Link class="ham-item hvr-underline-from-left" to="/events">
+                EVENTS
+              </Link>
+              <br/><br/>
+              <Link class="ham-item hvr-underline-from-left" to="/checkin">
+                CHECK IN
+              </Link>
+              <br/><br/>
+              <Link class="ham-item hvr-underline-from-left" to="/yourplot">
+                YOUR PLOT
+              </Link>
+            </div>
           </div>
+
+          <Link class="nav-item hvr-underline-from-left" to="/events">
+            EVENTS
+          </Link>
+
+          <Link class="nav-item hvr-underline-from-left" to="/checkin">
+            CHECK IN
+          </Link>
+
+          <Link class="nav-item hvr-underline-from-left" to="/yourplot">
+            YOUR PLOT
+          </Link>
+
         </div>
 
-        <Link class="nav-item hvr-underline-from-left" to="/events">
-          EVENTS
-        </Link>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/events" component={Events} />
+        <Route exact path="/checkin" component={CheckIn} />
+      </Switch>
 
-        <Link class="nav-item hvr-underline-from-left" to="/checkin">
-          CHECK IN
-        </Link>
-
-        <Link class="nav-item hvr-underline-from-left" to="/yourplot">
-          YOUR PLOT
-        </Link>
-
-      </div>
-
-    <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/events" component={Events} />
-      <Route exact path="/checkin" component={CheckIn} />
-    </Switch>
-
-  </Router>
+    </Router>
 
 
-  );
+    );
+  }
 }
+
+export default Navbar;

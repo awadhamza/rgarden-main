@@ -1,10 +1,3 @@
-.outermost {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)), url(../../Media/farm2.jpeg);
-}
-
 .to_mid {
   padding-top: 20px;
   margin: 0 auto;
