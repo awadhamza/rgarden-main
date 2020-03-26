@@ -110,6 +110,10 @@ img {
 
 @media only screen and (max-width: 1051px) {
 
+  img {
+    width: 20%;
+  }
+
   #hi {
     display: none;
   }

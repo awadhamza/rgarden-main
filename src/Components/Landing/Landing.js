@@ -106,7 +106,7 @@ class Landing extends Component {
 
 
           <Grid container spacing={3}>
-            <Grid item xs={4}>
+            <Grid item md={4} xs={12} >
               <img src={plant_icon} />
               <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
                <div class="card">
@@ -115,7 +115,7 @@ class Landing extends Component {
                </div>
               </Tilt>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={4} xs={12} >
               <img src={team_icon} />
               <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
                <div class="card">
@@ -124,7 +124,7 @@ class Landing extends Component {
                </div>
               </Tilt>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={4} xs={12} >
               <img src={activities_icon} />
               <Tilt className="Tilt poobah" options={{ max : 25, perspective: 1000, scale: 1.1 }} style={{ height: 250, width: 250 }} >
                <div class="card">
