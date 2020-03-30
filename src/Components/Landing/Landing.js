@@ -66,28 +66,28 @@ class Landing extends Component {
     this.state.imgNum = imagePick;
 
     if(imagePick == 1){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img1 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img1 + ')';
     }
     if(imagePick == 2){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img2 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img2 + ')';
     }
     if(imagePick == 3){
       document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img3 + ')';
     }
     if(imagePick == 4){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img4 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img4 + ')';
     }
     if(imagePick == 5){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img5 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img5 + ')';
     }
     if(imagePick == 6){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img6 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img6 + ')';
     }
     if(imagePick == 7){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img7 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img7 + ')';
     }
     if(imagePick == 8){
-      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url(' + img8 + ')';
+      document.getElementsByClassName("outermost")[0].style.backgroundImage = 'linear-gradient(rgba(255,255,255,0.2),rgba(0,0,0,0.1)),url(' + img8 + ')';
     }
 
   }
@@ -100,8 +100,10 @@ class Landing extends Component {
               <FontAwesomeIcon id="hi" size="3x" icon={faMagic} />
             </button>
           </div>
-          <div class="mainT"> R'Garden? </div>
-          <div class="subT">Yes. <b>YOURS</b> too! </div>
+          <div class="header_holder">
+            <div class="mainT"> R'Garden? </div>
+            <div class="subT">Yes. <b>YOURS</b> too! </div>
+          </div>
 
 
 
@@ -138,8 +140,6 @@ class Landing extends Component {
           <div class="bot_land">
             Where to get started:
           </div>
-
-          <Footer />
 
         </div>
     );

@@ -19,6 +19,7 @@
     "react": "^16.13.0",
     "react-awesome-button": "^6.5.1",
     "react-dom": "^16.13.0",
+    "react-flippy": "^0.1.5",
     "react-grid-layout": "^0.18.3",
     "react-native-really-awesome-button": "^1.6.0",
     "react-router-dom": "^5.1.2",

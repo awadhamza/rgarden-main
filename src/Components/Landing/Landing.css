@@ -23,14 +23,14 @@ font-family: 'Play', sans-serif;
 .poobah {
   padding: 10px 20px 20px 20px;
   margin: 0 auto;
-  background-color: rgba(39, 83, 171,0.1);
+  background-color: rgba(39, 83, 171,0.3);
   border-radius: 70px;
   color: white;
   font-size: 20px;
 }
 
 .poobah:hover {
-  background-color: rgba(39, 83, 171,0.5);
+  background-color: rgba(39, 83, 171,0.7);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -96,6 +96,9 @@ img {
   padding-top: 80px;
   letter-spacing: -5px;
   text-shadow: 4px 4px black;
+}
+
+.header_holder {
 }
 
 .subT {

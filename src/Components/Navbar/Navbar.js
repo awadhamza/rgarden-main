@@ -12,6 +12,7 @@ import './Navbar.css';
 import Events from '../Events/Events';
 import CheckIn from '../CheckIn/CheckIn';
 import Footer from '../Footer/Footer';
+import History from '../History/History';
 
 class Navbar extends Component {
   constructor(props) {
@@ -139,7 +140,10 @@ class Navbar extends Component {
         <Route exact path="/" component={Landing} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/checkin" component={CheckIn} />
+        <Route exact path="/history" component={History} />
       </Switch>
+
+      <Footer />
 
     </Router>
 

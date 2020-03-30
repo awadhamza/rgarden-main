@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Indie+Flower|Play|Righteous|Roboto|Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC&display=swap');
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'IM Fell Double Pica SC', serif;
+*/
+
+.mainH {
+}
+
+.top_tile {
+  padding-bottom: 0 !important;
+}
+
+.history_tile {
+  height: 300px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 90%;
+  background-color: white;
+  position: relative;
+  padding-bottom: 0
+}
+
+.history_tile_title {
+font-family: 'Dosis', sans-serif;
+  display: inline-block;
+  font-size: 60px;
+}
+
+  .history_tile_side {
+    padding-top: 10px;
+    font-family: 'Dosis', sans-serif;
+    margin-top: 50px;
+    text-align: center;
+        vertical-align: middle;
+        width: 500px;
+        height: 290px;
+        background-color: white;
+        font-size: 90px;
+}
+
+.history_tile_desc {
+  padding-top: 25px;
+    font-size: 18px;
+    height: 100%;
+}
+
+.history_tile img {
+    float: right;
+    height: 300px;
+    width: 400px;
+}
+
+.line {
+  margin-top: 10px;
+}
+
+.left {
+  margin-left: 25px !important;
+}
+
+.mobile {
+  display: none;
+  text-align: center;
+}
+
+.mobile_title {
+  padding-top: 10px;
+  font-size: 30px;
+}
+
+.flippy-cardContainer:hover {
+  cursor: pointer;
+}
+#root > div > div.mainH > div.mobile > div {
+  margin-bottom: 20px !important;
+}
+
+#mobile_icon {
+
+}
+
+.mobile_img {
+  width: 200px;
+}
+
+
+
+@media only screen and (max-width: 1380px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .mobile {
+    margin-top: 135px;
+  }
+}
