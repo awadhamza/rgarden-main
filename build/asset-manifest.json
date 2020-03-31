@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.1fc3149f.chunk.css",
-    "main.js": "/static/js/main.ea133007.chunk.js",
-    "main.js.map": "/static/js/main.ea133007.chunk.js.map",
+    "main.css": "/static/css/main.519e365a.chunk.css",
+    "main.js": "/static/js/main.50577cbf.chunk.js",
+    "main.js.map": "/static/js/main.50577cbf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.a954de9a.js",
     "runtime-main.js.map": "/static/js/runtime-main.a954de9a.js.map",
-    "static/js/2.95e8bc01.chunk.js": "/static/js/2.95e8bc01.chunk.js",
-    "static/js/2.95e8bc01.chunk.js.map": "/static/js/2.95e8bc01.chunk.js.map",
+    "static/css/2.70e35f80.chunk.css": "/static/css/2.70e35f80.chunk.css",
+    "static/js/2.9fd9f4d4.chunk.js": "/static/js/2.9fd9f4d4.chunk.js",
+    "static/js/2.9fd9f4d4.chunk.js.map": "/static/js/2.9fd9f4d4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0c334219e6945f54ae39f75990f5755f.js": "/precache-manifest.0c334219e6945f54ae39f75990f5755f.js",
+    "precache-manifest.be2ac4d02f4b6790bcc9b87a0665338a.js": "/precache-manifest.be2ac4d02f4b6790bcc9b87a0665338a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.1fc3149f.chunk.css.map": "/static/css/main.1fc3149f.chunk.css.map",
-    "static/js/2.95e8bc01.chunk.js.LICENSE.txt": "/static/js/2.95e8bc01.chunk.js.LICENSE.txt",
+    "static/css/2.70e35f80.chunk.css.map": "/static/css/2.70e35f80.chunk.css.map",
+    "static/css/main.519e365a.chunk.css.map": "/static/css/main.519e365a.chunk.css.map",
+    "static/js/2.9fd9f4d4.chunk.js.LICENSE.txt": "/static/js/2.9fd9f4d4.chunk.js.LICENSE.txt",
     "static/media/activities-icon.png": "/static/media/activities-icon.93750d0d.png",
     "static/media/farm1.jpeg": "/static/media/farm1.3ae761c6.jpeg",
     "static/media/farm2.jpeg": "/static/media/farm2.0cf66277.jpeg",
@@ -20,13 +22,17 @@
     "static/media/garden2.jpeg": "/static/media/garden2.69b6e79b.jpeg",
     "static/media/garden3.jpeg": "/static/media/garden3.4d08d131.jpeg",
     "static/media/Landing.css": "/static/media/garden6.9cf92b9e.jpeg",
+    "static/media/history1.jpg": "/static/media/history1.d3225b3e.jpg",
+    "static/media/history2.jpg": "/static/media/history2.a4e5ea67.jpg",
+    "static/media/history3.jpg": "/static/media/history3.2bfd6ea5.jpg",
     "static/media/plant-icon.png": "/static/media/plant-icon.2549921a.png",
     "static/media/team-icon.png": "/static/media/team-icon.11055543.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a954de9a.js",
-    "static/js/2.95e8bc01.chunk.js",
-    "static/css/main.1fc3149f.chunk.css",
-    "static/js/main.ea133007.chunk.js"
+    "static/css/2.70e35f80.chunk.css",
+    "static/js/2.9fd9f4d4.chunk.js",
+    "static/css/main.519e365a.chunk.css",
+    "static/js/main.50577cbf.chunk.js"
   ]
 }
