@@ -13,10 +13,15 @@ import Events from '../Events/Events';
 import CheckIn from '../CheckIn/CheckIn';
 import Footer from '../Footer/Footer';
 import History from '../History/History';
+import Mission from '../Mission/Mission';
+import ForumPage from '../Forum/ForumPage';
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount(){
   }
 
   handleBurger() {
@@ -56,6 +61,7 @@ class Navbar extends Component {
   }
 
   render() {
+
     return (
       <Router>
         <div class="nav_bar">
@@ -91,18 +97,18 @@ class Navbar extends Component {
 
             <div class="mobile_parent">
 
-              <span class="about-nav hvr-underline-from-left" onClick={this.handleMobileAbout}>
+              <span class="about-nav hvr-underline-from-left no_highlights" onClick={this.handleMobileAbout}>
                 <FontAwesomeIcon icon={faCaretSquareRight} /> ABOUT
               </span>
 
               <div class="dropdown_group" onClick={this.handleChoice}>
-                <Link class="hvr-grow-rotate" to="/history">History</Link>
+                <Link class="hvr-grow-rotate no_highlights" to="/history">History</Link>
                 <br/>
-                <Link class="hvr-grow-rotate" to="/mission">Mission</Link>
+                <Link class="hvr-grow-rotate no_highlights" to="/mission">Mission</Link>
                 <br/>
-                <Link class="hvr-grow-rotate" to="/hoursandlocation">Time & Place</Link>
+                <Link class="hvr-grow-rotate no_highlights" to="/hoursandlocation">Time & Place</Link>
                 <br/>
-                <Link class="hvr-grow-rotate" to="/media">Media</Link>
+                <Link class="hvr-grow-rotate no_highlights" to="/media">Media</Link>
                 <br/>
               </div>
 
@@ -116,8 +122,8 @@ class Navbar extends Component {
                 CHECK IN
               </Link>
               <br/><br/>
-              <Link class="ham-item hvr-underline-from-left" to="/yourplot">
-                YOUR PLOT
+              <Link class="ham-item hvr-underline-from-left" to="/forum">
+                FORUM
               </Link>
             </div>
           </div>
@@ -130,8 +136,8 @@ class Navbar extends Component {
             CHECK IN
           </Link>
 
-          <Link class="nav-item hvr-underline-from-left" to="/yourplot">
-            YOUR PLOT
+          <Link class="nav-item hvr-underline-from-left" to="/forum">
+            FORUM
           </Link>
 
         </div>
@@ -141,6 +147,8 @@ class Navbar extends Component {
         <Route exact path="/events" component={Events} />
         <Route exact path="/checkin" component={CheckIn} />
         <Route exact path="/history" component={History} />
+        <Route exact path="/mission" component={Mission} />
+        <Route exact path="/forum" component={ForumPage} />
       </Switch>
 
       <Footer />

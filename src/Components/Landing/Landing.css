@@ -81,7 +81,7 @@ font-family: 'Play', sans-serif;
   padding-bottom: 10px;
 }
 
-img {
+.MuiGrid-root img {
   width: 40%;
   display: block;
   margin: 0 auto;

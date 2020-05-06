@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Indie+Flower|Play|Righteous|Roboto|Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+*/
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+.outermost {
+  background-image: linear-gradient( rgba(255,255,255,0.3),rgba(0,0,0,0.3) ),url(../../Media/garden4.jpg);
+}
+
+.outer {
+  height: 80vh;
+  margin-bottom: 150px;
+}
+
+.small {
+  margin-top: 0 !important;
+  font-size: 30px !important;
+}
+
+.mid_canvas {
+  background-color: white;
+  height: 600px;
+  width: 1800px;
+  border-radius: 900px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  word-break: break-all;
+}
+
+.main_title {
+  color: white;
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Indie Flower', cursive;
+  text-shadow: 3px 3px black;
+}
+
+.pre_title {
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  margin: 30px 0 0px 0;
+  font-size: 50px;
+}
+
+.holder1, .holder2, .holder3 {
+  position: relative;
+  display: inline-block;
+  width: 31%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px !important;
+  vertical-align: middle;
+}
+
+span img {
+  height: 475px;
+}
+
+.holder1 {
+  margin-left: 60px !important;
+}
+
+.holder1:hover #pic1,.holder2:hover #pic2,.holder3:hover #pic3{
+  cursor: pointer;
+  opacity: 30%;
+  transition: 0.45s;
+}
+
+.holder1:hover .pic_text1,.holder2:hover .pic_text2,.holder3:hover .pic_text3  {
+  display: flex !important;
+  transition: 0.45s;
+}
+
+.holder1 img,.holder2 img,.holder3 img {
+  width: 100%;
+}
+
+.holder1 img {
+  border-top-left-radius: 900px;
+  border-bottom-left-radius: 900px;
+}
+
+.holder3 img {
+  border-top-right-radius: 900px;
+  border-bottom-right-radius: 900px;
+}
+
+.pic_text1,.pic_text2,.pic_text3 {
+  font-size: 20px;
+  display: none;
+  width: 80%;
+  color: red;
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .mid_canvas {
+    height: 600px;
+    width: 1200px;
+  }
+
+  #pic1,#pic2,#pic3 {
+    height: 100%;
+    width: 200% !important;
+  }
+
+  .outer {
+    margin-top: 150px;
+    margin-bottom: 250px;
+  }
+
+  .pre_title {
+    font-size: 30px;
+  }
+
+  .main_title {
+    font-size: 50px;
+  }
+
+  .small {
+    display: none;
+  }
+}
