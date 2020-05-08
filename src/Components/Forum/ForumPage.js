@@ -28,6 +28,7 @@ class ForumPage extends Component {
   componentDidMount() {
     if(document.getElementsByClassName('nav_bar')[0])
       document.getElementsByClassName('nav_bar')[0].style.display='none';
+
     firebase.auth().onAuthStateChanged(function(user) {
       if(user){
         self.setState({
@@ -59,6 +60,16 @@ class ForumPage extends Component {
     document.getElementsByClassName('nav_bar')[0].style.display='block';
   }
 
+  testDB() {
+    // <Button id='signout' onClick={self.testDB}>
+    //   TEST DB
+    // </Button>
+
+    var memRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
+    memRef.set({
+      firstVar: "LOLOLO",
+    });
+  }
 
   render() {
 
@@ -68,9 +79,10 @@ class ForumPage extends Component {
       );
     } else {
       content = (
-        <div>
-          <h1>SIGNED IN</h1>
-          <Button id='sob' onClick={self.handleSignOut}>
+        <div class="outer_signed_forum">
+          <h1>R'Garden Forum</h1>
+
+          <Button id='signout' onClick={self.handleSignOut}>
             Sign Out
           </Button>
         </div>
@@ -83,6 +95,7 @@ class ForumPage extends Component {
     return(
       <div class="outerForum">
         <Link class="hvr-grow-rotate returnHomeButton" to="/" onClick={self.undoNav}>Return Home</Link>
+        <div class="line" />
         {content}
       </div>
     );

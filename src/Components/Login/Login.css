@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Indie+Flower|Play|Righteous|Roboto|Sen&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IM+Fell+Great+Primer&family=Montserrat&display=swap');
 /*
 font-family: 'Roboto', sans-serif;
 font-family: 'Sen', sans-serif;
@@ -9,12 +10,100 @@ font-family: 'Anton', sans-serif;
 font-family: 'Indie Flower', cursive;
 font-family: 'Righteous', cursive;
 font-family: 'Play', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'IM Fell Great Primer', serif;
 */
 
-.under_desc {
-  width: 800px;
-  text-align: center;
+@media only screen and (max-width: 1050px) {
+  .outerForum {
+    margin-top: 0px;
+  }
+
+  .home_login h2 {
+    font-size: 30px !important;
+  }
+
+  .home_login h1 {
+    font-size: 45px !important;
+  }
+
+  .pun {
+    font-size: 25px !important;
+  }
+
+  .under_desc, .under_desc b {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .under_desc b {
+    padding-top: 10px !important;
+    font-size: 25px !important;
+  }
+
+
+}
+
+#radioGroup {
+  background-color: rgba(255,255,255,0.9) !important;
+  padding: 30px;
+  border-radius: 50px;
+  width: 350px;
+}
+
+#radioGroup > label > span.MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1 {
+  font-size: 17px;
+  text-align: left;
+}
+
+#root > div > div.outerForum > div > form > div {
+  background-color: white;
+}
+
+.under_desc b {
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+  font-weight: 400;
+  padding-top: 3.5px;
+  padding-right: 55px;
+  display: block;
   margin: 0 auto;
+  text-align: center !important;
+}
+
+#radioGroupHeader {
+  font-size: 30px;
+  font-weight: 900;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pun {
+
+  font-family: 'IM Fell Great Primer', serif;
+  font-size: 35px;
+}
+
+.under_desc img {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.upper_desc {
+  text-align: center !important;
+  font-size: 20px;
+}
+
+.under_desc {
+  padding-left: 70px;
+  width: 480px;
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 .line {
@@ -22,8 +111,8 @@ font-family: 'Play', sans-serif;
 }
 
 .login_header img {
-  height: 200px;
-  width: 190px;
+  height: 170px;
+  width: 160px;
   padding-top: 20px;
 }
 .home_login {
@@ -31,15 +120,34 @@ font-family: 'Play', sans-serif;
 }
 
 .home_login h1 {
-  font-size: 40px;
+font-family: 'Montserrat', sans-serif;
+  /* background-color: rgba(255,255,255,0.5); */
+  font-size: 70px;
   margin-top: 0;
   padding-top: 0;
 }
 
+#signout {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0 !important;
+}
+
+.outer_signed_forum {
+  padding-bottom: 20px;
+}
+
 .home_login h2 {
-  font-size: 30px;
+  display: block !important;
+font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
   padding-top: 5px;
   padding-bottom: 10px;
+}
+
+.sub_title {
+  padding-top: 50px !important;
+  font-size: 40px !important;
 }
 
 .outlined-adornment-password {

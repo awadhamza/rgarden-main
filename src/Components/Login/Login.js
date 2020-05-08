@@ -21,8 +21,11 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import Orange from '../../Media/orange.jpg';
+import CheckMark from '../../Media/checkmark.png';
 
 import * as firebase from 'firebase';
+
+var profileType;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,10 +38,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Login() {
 
-    const [radioValue, setValue] = React.useState('male');
+    const [radioValue, setValue] = React.useState('Student');
 
     const handleRadioChange = (event) => {
       setValue(event.target.value);
+      profileType = event.target.value;
     };
 
     const classes = useStyles();
@@ -98,11 +102,23 @@ export default function Login() {
 
     function checkRegistration(){
 
+      if(profileType == null){
+        alert('Please select a profile type from the options below');
+        return;
+      }
+
         // CHECK IF BOTH PASSWORDS ARE EQUAL
+        let email = document.getElementById('outlined-basic-email').value;
+        let password = document.getElementById('outlined-adornment-password1').value;
+        let confirmPassword = document.getElementById('outlined-adornment-password2').value;
 
+        if(password != confirmPassword){
+          alert('Passwords don\'t match');
+          return;
+        }
 
-        let email = document.getElementById('outlined-basic').value;
-        let password = document.getElementById('outlined-adornment-password').value;
+        let fname = document.getElementById('outlined-basic-fullname').value.split(' ')[0];
+        let lname = document.getElementById('outlined-basic-fullname').value.split(' ')[1];
 
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .catch(function(error) {
@@ -110,22 +126,22 @@ export default function Login() {
             return;
         });
 
-        // Setup template surah data in firebase
-        //setupNewUser();
+        // Setup profile data for account
+        setupDatabase(fname, lname, email);
     }
 
-    function setupNewUser(){
-        firebase.auth().onAuthStateChanged(function(user) {
-            if(user){
-                var memRef = firebase.database().ref('memorize/' + user.uid);
-
-                memRef.set({
-                    1: "0000000",
-                    2: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-
-                });
-            }
-        });
+    function setupDatabase(fname, lname, email){
+      firebase.auth().onAuthStateChanged(function(user) {
+        if(user){
+          var memRef = firebase.database().ref('users/' + user.uid);
+          memRef.set({
+            email: email,
+            fname: fname,
+            lname: lname,
+            profile: profileType,
+          });
+        }
+      });
 
     }
 
@@ -141,27 +157,23 @@ export default function Login() {
                 R'GARDEN FORUM
               </h1>
               <div class="pun">
-                “Kind of a big dill”
-                “Oh, kale yeah”
-                “Be nice or leaf”
                 “Herb your enthusiasm”
               </div>
               <div class="under_desc">
-                The platform where everyone can share their experiences, inquire about<br/> gardening practices, and get to know your fellow community members.
+                The online network for students, gardeners, and community members to explore, learn, and share. <br/><b>So what are you waiting for?</b>
               </div>
             </div>
-            <div class="line" />
-            <h1>Sign Up</h1>
+            <h1 class="sub_title">Sign Up</h1>
             <form className={classes.root} noValidate autoComplete="off">
 
-                <TextField id="outlined-basic" label="Email" variant="outlined" />
+                <TextField id="outlined-basic-email" label="Email" variant="outlined" /><TextField id="outlined-basic-fullname" label="First & Last Name" variant="outlined" />
 
                 <br/>
 
                 <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                   <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                   <OutlinedInput
-                    id="outlined-adornment-password"
+                    id="outlined-adornment-password1"
                     type={values.showPassword ? 'text' : 'password'}
                     value={values.password}
                     onChange={handleChange('password')}
@@ -184,7 +196,7 @@ export default function Login() {
                 <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                   <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
                   <OutlinedInput
-                    id="outlined-adornment-password"
+                    id="outlined-adornment-password2"
                     type={values.showPassword ? 'text' : 'password'}
                     value={values.confirmPassword}
                     onChange={handleChange('confirmPassword')}
@@ -212,9 +224,9 @@ export default function Login() {
 
                 <FormLabel id="radioGroupHeader" component="legend">Select your profile:</FormLabel>
                 <RadioGroup id="radioGroup" value={radioValue} onChange={handleRadioChange}>
-                  <FormControlLabel value="learner" control={<Radio />} label="Student" />
-                  <FormControlLabel value="teacher" control={<Radio />} label="Staff/Intern" />
-                  <FormControlLabel value="teacher" disabled control={<Radio />} label="Community Member" />
+                  <FormControlLabel value="student" control={<Radio />} label="Student" />
+                  <FormControlLabel value="staff" control={<Radio />} label="Staff/Intern" />
+                  <FormControlLabel value="community" control={<Radio />} label="Community Member" />
                 </RadioGroup>
 
             </form>
