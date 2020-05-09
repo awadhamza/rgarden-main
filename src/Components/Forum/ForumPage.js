@@ -10,11 +10,38 @@ import {
 } from "react-router-dom";
 import Arrow from '../../Media/arrow.png';
 import Return from '../../Media/return.png';
+import ForumSection from './ForumSection.js';
+import ForumHeader from './ForumHeader.js';
+import ForumPosts from './ForumPosts.js';
+
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 
 import * as firebase from 'firebase';
 
 var content;
 var self;
+
+function undoNav() {
+  document.getElementsByClassName('nav_bar')[0].style.display='block';
+}
+
+function returnForum() {
+  Array.from(document.getElementsByClassName("outer_section")).forEach(
+      function(element, index, array) {
+          element.style.display = "block";
+      }
+  );
+}
+
+function hidePosts() {
+  Array.from(document.getElementsByClassName("posts")).forEach(
+      function(element, index, array) {
+          element.style.display = "none";
+      }
+  );
+  document.getElementsByClassName('forum_button')[0].style.display="none";
+}
 
 class ForumPage extends Component {
   constructor(props) {
@@ -56,9 +83,6 @@ class ForumPage extends Component {
         });
   }
 
-  undoNav() {
-    document.getElementsByClassName('nav_bar')[0].style.display='block';
-  }
 
   testDB() {
     // <Button id='signout' onClick={self.testDB}>
@@ -80,7 +104,9 @@ class ForumPage extends Component {
     } else {
       content = (
         <div class="outer_signed_forum">
+
           <h1>R'Garden Forum</h1>
+          <ForumHeader />
 
           <Button id='signout' onClick={self.handleSignOut}>
             Sign Out
@@ -94,8 +120,32 @@ class ForumPage extends Component {
 
     return(
       <div class="outerForum">
-        <Link class="hvr-grow-rotate returnHomeButton" to="/" onClick={self.undoNav}>Return Home</Link>
-        <div class="line" />
+
+          <AwesomeButton
+            class="aws-btn left_home"
+            size="large"
+            ripple
+            onPress={() => {
+              this.props.history.push('/');
+              undoNav();
+            }}
+          >
+            Home Page
+          </AwesomeButton>
+          <span class="forum_button">
+            <AwesomeButton
+              class="aws-btn"
+              size="large"
+              ripple
+              onPress={() => {
+                returnForum();
+                hidePosts();
+              }}
+            >
+              Return to Forum
+            </AwesomeButton>
+          </span>
+        <br/>
         {content}
       </div>
     );

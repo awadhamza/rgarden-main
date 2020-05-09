@@ -15,9 +15,116 @@ font-family: 'Fredericka the Great', cursive;
 font-family: 'IM Fell Great Primer', serif;
 */
 
+.line2 {
+  margin-top: 0 !important;
+}
+
+.outer_posts {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  z-index: 10;
+  background-color: #FeF;
+  width: 100vw;
+  height: 90vh;
+}
+
+#root > div > div.outerForum > button:nth-child(1) {
+  float: left !important;
+  --button-default-font-size: 20px !important;
+  margin-left: 10px !important;
+  margin-right: 15px !important;
+
+}
+
+#root > div > div.outerForum > button:nth-child(2) {
+  margin-left: 0 auto !important;
+}
+
+.forum_button {
+  display: none;
+}
+
+.aws-btn {
+  margin-top: 15px !important;
+  --button-default-height: 00px !important;
+  --button-default-font-size: 20px !important;
+  --button-default-border-radius: 5px !important;
+  --button-horizontal-padding: 19px !important;
+  --button-raise-level: 9px !important;
+  --button-hover-pressure: 2.5 !important;
+  --transform-speed: 0.175s !important;
+  --button-primary-color: #1e88e5 !important;
+  --button-primary-color-dark: #1360a4 !important;
+  --button-primary-color-light: #ffffff !important;
+  --button-primary-color-hover: #187bd1 !important;
+  --button-primary-border: none !important;
+  --button-secondary-color: #f2f6f9 !important;
+  --button-secondary-color-dark: #1360a4 !important;
+  --button-secondary-color-light: #1e88e5 !important;
+  --button-secondary-color-hover: #e1eaf1 !important;
+  --button-secondary-border: 2px solid #1e88e5 !important;
+  --button-anchor-color: #0e4f88 !important;
+  --button-anchor-color-dark: #072743 !important;
+  --button-anchor-color-light: #ffffff !important;
+  --button-anchor-color-hover: #0d4a7f !important;
+  --button-anchor-border: none !important;
+}
+
+.posts_title {
+
+}
+
+.posts {
+  display: none;
+}
+
+.outer_section:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px rgba(0,0,0,0.5);
+  transition: 0.2s;
+}
+
+.section_subject {
+  font-weight: 900;
+  font-size: 20px;
+  font-family: 'Play', sans-serif;
+  float: left;
+}
+
+.section_body {
+  border-left: 2px solid black;
+  margin-left: 190px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  overflow-x: hidden;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.section_subject {
+  padding: 10px;
+}
+
+.outer_section {
+  padding: 0 10px 0 10px;
+  background-color: #EEE;
+  overflow-y: hidden;
+  max-height: 45px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2.5px;
+}
+
+.outer_forum_section a {
+  color: black !important;
+}
+
 .outer_signed_forum h1 {
+  padding-right: 250px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 20px;
 }
 
 .outerForum {
@@ -25,6 +132,7 @@ font-family: 'IM Fell Great Primer', serif;
 }
 
 .outerForum img {
+  padding-right: 220px;
   width: 200px;
 }
 
@@ -62,4 +170,13 @@ font-family: 'IM Fell Great Primer', serif;
     margin-top: 121px;
   }
 
+}
+
+
+
+@media only screen and (max-width: 800px){
+  .outer_signed_forum h1 {
+    padding-top: 45px;
+    padding-right: 0px !important;
+  }
 }

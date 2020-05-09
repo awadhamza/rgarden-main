@@ -17,6 +17,7 @@
     "hover.css": "^2.3.2",
     "jquery": "^3.4.1",
     "material-ui": "^0.20.2",
+    "node-sass": "^4.14.1",
     "pace": "0.0.4",
     "pace-js": "^1.0.2",
     "react": "^16.13.0",
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3"
   }
 }
