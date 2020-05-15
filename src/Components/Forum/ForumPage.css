@@ -15,24 +15,95 @@ font-family: 'Fredericka the Great', cursive;
 font-family: 'IM Fell Great Primer', serif;
 */
 
+#root > div > div > div > button {
+  margin-top: 2.5px !important;
+  margin-bottom: 0px !important;
+}
+
+#post_author {
+    font-weight: bold;
+    float: left !important;
+    font-size: 18px;
+    padding-bottom: 0px;
+    min-width: 100px;
+    border-right: 2px solid black;
+    background-color: white;
+    padding-left: 5px;
+}
+
+#post_content {
+  word-break: keep-all;
+  font-size: 17px;
+  font-family: 'Play', sans-serif;
+  letter-spacing: 1px;
+  text-align: left !important;
+  margin-left: 10px;
+  line-height: 150%;
+}
+
+#post_date {
+  font-style: italic;
+  padding-top: 2.5px;
+  float: right;
+  padding-left: 40px;
+  color: #777;
+}
+
+.cke_chrome {
+}
+
+.post_mapper {
+  padding: 10px;
+  width: 75%;
+  margin: 0 auto;
+  display: grid;
+  overflow-y: auto;
+}
+
+.post_outer {
+  min-height: 24px;
+  width: 70vw;
+  background-color: rgba(240,240,240,1);
+  margin: 0 auto;
+  margin-bottom: 3px;
+  padding: 10px;
+}
+
+.posts_title {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Play', sans-serif;
+}
+
 .line2 {
   margin-top: 0 !important;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
 .outer_posts {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  z-index: 10;
-  background-color: #FeF;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  background-color: #fff;
   width: 100vw;
-  height: 90vh;
 }
 
 #root > div > div.outerForum > button:nth-child(1) {
   float: left !important;
   --button-default-font-size: 20px !important;
-  margin-left: 10px !important;
+  margin-left: 5px !important;
   margin-right: 15px !important;
 
 }
@@ -70,6 +141,21 @@ font-family: 'IM Fell Great Primer', serif;
   --button-anchor-color-hover: #0d4a7f !important;
   --button-anchor-border: none !important;
 }
+
+.bot_butt {
+  display: inline-block;
+}
+
+.scroll_button {
+  float: right;
+}
+
+.send_button {
+  float: right;
+  margin-right: 10%;
+  margin-left: 2%;
+}
+
 
 .posts_title {
 
@@ -111,7 +197,7 @@ font-family: 'IM Fell Great Primer', serif;
   background-color: #EEE;
   overflow-y: hidden;
   max-height: 45px;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   margin-top: 2.5px;
 }
@@ -125,10 +211,16 @@ font-family: 'IM Fell Great Primer', serif;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   padding-bottom: 20px;
+  width: 100%;
+}
+
+.outer_signed_forum {
+  padding-bottom: 0 !important;
 }
 
 .outerForum {
   background-color: white;
+  height: 100vh;
 }
 
 .outerForum img {
@@ -165,6 +257,11 @@ font-family: 'IM Fell Great Primer', serif;
   background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.8)),url(../../Media/greenhouse.jpeg);
 }
 
+.input_holder {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
 @media only screen and (max-width: 1051px) {
   .outerForum {
     margin-top: 121px;
@@ -172,11 +269,215 @@ font-family: 'IM Fell Great Primer', serif;
 
 }
 
-
-
 @media only screen and (max-width: 800px){
   .outer_signed_forum h1 {
-    padding-top: 45px;
+    padding-top: 35px;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
     padding-right: 0px !important;
   }
+
+
+    .outer_section {
+      width: 95%;
+    }
+
+    .section_body {
+      font-size: 14px;
+      padding-top: 3.5px;;
+    }
 }
+
+.input_holder {
+  margin-top: 15px;
+  background-color: white;
+}
+
+.SHRINK {
+  margin-left: 10px;
+  display: -webkit-inline-box;
+}
+
+.forum_button {
+  margin-left: 10px;
+}
+
+.mobile_forum {
+  display: none;
+}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'IM Fell Great Primer', serif;
+*/
+
+.mobile_top {
+  display: none;
+  text-align: center;
+}
+
+.mobile_home {
+  margin-left: 10px;
+}
+
+.mobile_home, .mobile_forum {
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 18px;
+  font-family: 'Play', sans-serif !important;
+}
+
+.mobile_forum {
+  margin-left: 15px;
+}
+
+.mobile_home, .mobile_forum {
+	box-shadow:inset 0px -3px 7px 0px #3498eb;
+	background:linear-gradient(to bottom, #3498eb 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:3px;
+	border:1px solid #0b0e07;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.mobile_home:hover, .mobile_forum:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.mobile_home:active, .mobile_forum:active {
+	position:relative;
+	top:1px;
+}
+
+.return_button {
+  display: inline-block;
+}
+
+.scroll_button {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 450px){
+
+  .outerForum {
+  }
+
+  .SHRINK {
+    padding-top: 10px !important;
+  }
+
+  .section_subject {
+    font-size: 16px;
+  }
+
+  .section_body {
+    margin-left: 150px;
+  }
+
+  .posts_title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  #root > div > div.outerForum > button:nth-child(1) {
+    --button-default-font-size: 20px !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
+
+  .forum_button {
+    display: none !important;
+  }
+
+  .return_button {
+    display: none !important;
+  }
+
+  .mobile_home {
+    display: inline;
+  }
+
+  .SHRINK {
+    display: block;
+  }
+
+  .outer_posts {
+    width: 100%;
+  }
+
+  .post_mapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .post_outer {
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    width: 97%;
+  }
+
+  #post_author {
+    min-width: 10px;
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+    font-size: 16px;
+  }
+
+  #post_content {
+    letter-spacing: 0;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 0;
+  }
+
+  #post_date {
+    font-size: 9px;
+    padding-top: 10px;
+    padding-right: 3px;
+    color: #777;
+    padding-left: 20px;
+  }
+
+  .section_body {
+    font-size: 10px;
+    padding-top: 3.5px;;
+  }
+
+
+  .outer_posts {
+  }
+
+}
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'IM Fell Great Primer', serif;
+*/

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './ForumPage.css';
 import Button from '@material-ui/core/Button';
 import ForumSection from './ForumSection.js';
+import Footer from '../Footer/Footer';
 
 import * as firebase from 'firebase';
 

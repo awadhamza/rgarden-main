@@ -24,6 +24,7 @@ var self;
 
 function undoNav() {
   document.getElementsByClassName('nav_bar')[0].style.display='block';
+  document.getElementsByClassName('footer_head')[0].style.display='block';
 }
 
 function returnForum() {
@@ -32,6 +33,7 @@ function returnForum() {
           element.style.display = "block";
       }
   );
+  document.getElementById('forum_title').style.display = 'block';
 }
 
 function hidePosts() {
@@ -41,6 +43,8 @@ function hidePosts() {
       }
   );
   document.getElementsByClassName('forum_button')[0].style.display="none";
+  document.getElementsByClassName('mobile_forum')[0].style.display="none";
+  document.getElementById('signout').style.display = "block";
 }
 
 class ForumPage extends Component {
@@ -53,9 +57,10 @@ class ForumPage extends Component {
   }
 
   componentDidMount() {
-    if(document.getElementsByClassName('nav_bar')[0])
+    if(document.getElementsByClassName('nav_bar')[0]){
       document.getElementsByClassName('nav_bar')[0].style.display='none';
-
+      document.getElementsByClassName('footer_head')[0].style.display='none';
+    }
     firebase.auth().onAuthStateChanged(function(user) {
       if(user){
         self.setState({
@@ -83,7 +88,6 @@ class ForumPage extends Component {
         });
   }
 
-
   testDB() {
     // <Button id='signout' onClick={self.testDB}>
     //   TEST DB
@@ -93,6 +97,16 @@ class ForumPage extends Component {
     memRef.set({
       firstVar: "LOLOLO",
     });
+  }
+
+  goHome() {
+    self.props.history.push('/');
+    undoNav();
+  }
+
+  returnToForum() {
+    returnForum();
+    hidePosts();
   }
 
   render() {
@@ -105,7 +119,7 @@ class ForumPage extends Component {
       content = (
         <div class="outer_signed_forum">
 
-          <h1>R'Garden Forum</h1>
+          <h1 id="forum_title">R'Garden Chat Forum</h1>
           <ForumHeader />
 
           <Button id='signout' onClick={self.handleSignOut}>
@@ -120,19 +134,24 @@ class ForumPage extends Component {
 
     return(
       <div class="outerForum">
-
-          <AwesomeButton
-            class="aws-btn left_home"
-            size="large"
-            ripple
-            onPress={() => {
-              this.props.history.push('/');
-              undoNav();
-            }}
-          >
+        <div class="SHRINK">
+          <div class="return_button">
+            <AwesomeButton
+              class="aws-btn"
+              size="large"
+              ripple
+              onPress={() => {
+                this.props.history.push('/');
+                undoNav();
+              }}
+            >
+              Home Page
+            </AwesomeButton>
+          </div>
+          <button class="mobile_top mobile_home" onClick={this.goHome}>
             Home Page
-          </AwesomeButton>
-          <span class="forum_button">
+          </button>
+          <div class="forum_button">
             <AwesomeButton
               class="aws-btn"
               size="large"
@@ -144,8 +163,11 @@ class ForumPage extends Component {
             >
               Return to Forum
             </AwesomeButton>
-          </span>
-        <br/>
+          </div>
+          <button class="mobile_top mobile_forum" onClick={this.returnToForum}>
+            Return to Forum
+          </button>
+        </div>
         {content}
       </div>
     );

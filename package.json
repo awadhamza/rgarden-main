@@ -2,6 +2,18 @@
   "name": "rgarden",
   "version": "0.1.0",
   "private": true,
+  "babel": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+          "@babel/plugin-proposal-class-properties",
+          {
+            "loose": true
+          }
+      ]
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -13,6 +25,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "ckeditor4-react": "^1.1.0",
     "firebase": "^7.14.2",
     "hover.css": "^2.3.2",
     "jquery": "^3.4.1",

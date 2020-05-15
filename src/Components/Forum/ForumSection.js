@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ForumPage.css';
 import Login from '../Login/Login';
+import Footer from '../Footer/Footer';
 import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
@@ -11,6 +12,11 @@ import {
 import Arrow from '../../Media/arrow.png';
 import Return from '../../Media/return.png';
 import ForumPosts from './ForumPosts.js';
+import TextField from '@material-ui/core/TextField';
+
+import { AwesomeButton, AwesomeButtonProgress } from "react-awesome-button";
+import AwesomeButtonStyles from 'react-awesome-button/src/styles/styles.scss';
+import "react-awesome-button/dist/styles.css";
 
 import * as firebase from 'firebase';
 
@@ -23,32 +29,36 @@ export default function Forumsection(props) {
 
   function alertPosts() {
     var sectionPosts = document.getElementsByClassName(postsName);
-    var postsSection = document.getElementsByClassName("section_"+props.subject);
 
     if(sectionPosts == null){
+
       alert(sectionPosts + " is empty");
+
     } else {
       if(sectionPosts[0].style.display != "block"){
         // Hide everything but posts
         sectionPosts[0].style.display = "block";
-
+        document.getElementById('signout').style.display = "none";
         Array.from(document.getElementsByClassName("outer_section")).forEach(
             function(element, index, array) {
                 element.style.display = "none";
             }
         );
-
-        document.getElementsByClassName('forum_button')[0].style.display="block";
-
+        if(document.getElementsByClassName('return_button')[0].style.display == "inline-block"){
+          // alert('b'+document.getElementsByClassName('return_button')[0].style.display);
+          document.getElementsByClassName('forum_button')[0].style.display="inline-block";
+        } else {
+          // alert('a'+document.getElementsByClassName('return_button')[0].style.display);
+          document.getElementsByClassName('mobile_forum')[0].style.display="inline-block";
+        }
+        document.getElementById('forum_title').style.display = 'none';
         return;
       }
-      // Show everything but posts
-      sectionPosts[0].style.display = "none";
-
-
-      // if(collection[0].style.display == "hidden")
-      // collection[0].style.display = "block";
     }
+  }
+
+  function relaxSend(){
+    alert('hi');
   }
 
   return(
@@ -58,7 +68,18 @@ export default function Forumsection(props) {
         <div class="section_body">{props.body}</div>
       </div>
       <div class={"posts " + postsName}>
-        <ForumPosts subject={props.subject} pName={postsName} />
+        <ForumPosts subject={props.subject} />
+        <div class="input_holder">
+          <TextField
+            id={"outlined-multiline-static"+postsName}
+            label=""
+            multiline
+            rows={4}
+            defaultValue=""
+            variant="outlined"
+            style = {{width: '80%', backgroundColor: '#e8f1ff'}}
+          />
+        </div>
       </div>
     </div>
 
