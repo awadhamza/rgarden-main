@@ -20,7 +20,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
-import Orange from '../../Media/orange.jpg';
+import Orange from '../../Media/orange.png';
 import CheckMark from '../../Media/checkmark.png';
 
 import * as firebase from 'firebase';
@@ -149,12 +149,11 @@ export default function Login() {
 
           <div className="home_login">
             <div class="login_header">
-              <img src={Orange} />
               <h2>
                 Introducing the <b><i>NEW</i></b>
               </h2>
               <h1>
-                R'GARDEN FORUM
+                R'GARDEN <br class="if_mobile" />F<img src={Orange} />RUM
               </h1>
               <div class="pun">
                 “Herb your enthusiasm”

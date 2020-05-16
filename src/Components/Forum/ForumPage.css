@@ -224,8 +224,8 @@ font-family: 'IM Fell Great Primer', serif;
 }
 
 .outerForum img {
-  padding-right: 220px;
-  width: 200px;
+  width: 60px !important;
+  height: 60px !important;
 }
 
 .box {
@@ -277,7 +277,6 @@ font-family: 'IM Fell Great Primer', serif;
     padding-bottom: 30px;
     padding-right: 0px !important;
   }
-
 
     .outer_section {
       width: 95%;
@@ -369,7 +368,28 @@ font-family: 'IM Fell Great Primer', serif;
   margin-right: 20px;
 }
 
+.if_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 450px){
+  .if_mobile {
+    display: block;
+  }
+
+  .under_desc {
+    width: 80% !important;
+    font-size: 16px !important;
+  }
+
+  .under_desc b {
+    font-size: 17px !important;
+  }
+
+  .outerForum img {
+    width: 40px !important;
+    height: 40px !important;
+  }
 
   .outerForum {
   }

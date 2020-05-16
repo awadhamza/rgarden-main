@@ -14,6 +14,9 @@ import ForumSection from './ForumSection.js';
 import ForumHeader from './ForumHeader.js';
 import ForumPosts from './ForumPosts.js';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 
@@ -149,7 +152,7 @@ class ForumPage extends Component {
             </AwesomeButton>
           </div>
           <button class="mobile_top mobile_home" onClick={this.goHome}>
-            Home Page
+            <FontAwesomeIcon id="" size="sm" icon={faArrowLeft} /> Home Page
           </button>
           <div class="forum_button">
             <AwesomeButton
@@ -165,7 +168,7 @@ class ForumPage extends Component {
             </AwesomeButton>
           </div>
           <button class="mobile_top mobile_forum" onClick={this.returnToForum}>
-            Return to Forum
+            <FontAwesomeIcon id="" size="sm" icon={faCodeBranch} /> Return to Forum
           </button>
         </div>
         {content}
