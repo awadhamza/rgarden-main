@@ -120,6 +120,11 @@ export default function Login() {
         let fname = document.getElementById('outlined-basic-fullname').value.split(' ')[0];
         let lname = document.getElementById('outlined-basic-fullname').value.split(' ')[1];
 
+        if(!fname || !lname){
+          alert('Please add a first name and a last name, separated by a space!');
+          return;
+        }
+
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .catch(function(error) {
             alert(error.message);
