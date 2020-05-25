@@ -32,7 +32,7 @@ font-family: 'IM Fell Great Primer', serif;
 }
 
 #post_content {
-  word-break: keep-all;
+  word-break: break-all;
   font-size: 17px;
   font-family: 'Play', sans-serif;
   letter-spacing: 1px;
@@ -61,7 +61,6 @@ font-family: 'IM Fell Great Primer', serif;
 }
 
 .post_outer {
-  min-height: 24px;
   width: 70vw;
   background-color: rgba(240,240,240,1);
   margin: 0 auto;

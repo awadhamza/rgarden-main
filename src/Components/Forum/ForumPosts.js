@@ -158,8 +158,8 @@ class ForumPosts extends Component {
       }
 
       var time = hours + ":" + minutes + " @ "
-           + currentdate.getDate() + "/"
            + (currentdate.getMonth()+1)  + "/"
+           + currentdate.getDate() + "/"
            + currentdate.getFullYear();
 
       var postsRef = firebase.database().ref('sections/' + self.props.subject + '/posts/' + Date.now()).set({
