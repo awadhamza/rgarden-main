@@ -61,6 +61,45 @@ export default function Forumsection(props) {
     alert('hi');
   }
 
+  function changeColors(color){
+    document.getElementsByClassName("num_chars")[0].style.color = color;
+    document.getElementsByClassName("after_num")[0].style.color = color;
+  }
+
+  function handleTextChange() {
+    var self = this;
+    let charCount = document.getElementById('outlined-multiline-static'+postsName).value.length;
+
+    document.getElementById("num_chars" + props.subject).innerHTML = 300 - charCount;
+
+    if(charCount > 300){
+
+      document.getElementsByClassName("send_button")[0].style.display = 'none';
+      document.getElementsByClassName("scroll_button")[0].style.marginRight = '20vw';
+      changeColors('red');
+    } else if(charCount > 289) {
+      changeColors('red');
+      document.getElementsByClassName("send_button")[0].style.display = 'block'
+      document.getElementsByClassName("scroll_button")[0].style.marginRight = '20px';
+    } else if(charCount > 249) {
+      changeColors('orange');
+      document.getElementsByClassName("send_button")[0].style.display = 'block'
+      document.getElementsByClassName("scroll_button")[0].style.marginRight = '20px';
+    } else {
+      changeColors('black');
+
+      if(window.innerWidth > 500){
+        document.getElementsByClassName("send_button")[0].style.display = 'block'
+        document.getElementsByClassName("mobile_send")[0].style.display = 'none'
+      } else{
+        document.getElementsByClassName("mobile_send")[0].style.display = 'inline-block'
+        document.getElementsByClassName("send_button")[0].style.display = 'none'
+      }
+
+      document.getElementsByClassName("scroll_button")[0].style.marginRight = '20px';
+    }
+  }
+
   return(
     <div class="double_outer_section">
       <div class={"outer_section " + "section_"+props.subject} onClick={alertPosts}>
@@ -69,7 +108,7 @@ export default function Forumsection(props) {
       </div>
       <div class={"posts " + postsName}>
         <ForumPosts subject={props.subject} />
-        <div class="input_holder">
+        <div class="input_holder" onChange={(e) => handleTextChange()}>
           <TextField
             id={"outlined-multiline-static"+postsName}
             label=""

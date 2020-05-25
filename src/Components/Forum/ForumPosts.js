@@ -5,6 +5,9 @@ import Button from '@material-ui/core/Button';
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretSquareDown, faEnvelope, faImage, faMarker, faPaperclip, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+
 import Post from './Post.js';
 
 import * as firebase from 'firebase';
@@ -45,6 +48,7 @@ class ForumPosts extends Component {
     }
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
 
   componentDidMount() {
@@ -73,10 +77,6 @@ class ForumPosts extends Component {
         posts: tempArr,
       })
 
-      // for(let post in self.state.posts){
-      //   alert(self.state.posts[post].content);
-      // }
-
     });
 
     this.scrollToBottom();
@@ -99,7 +99,7 @@ class ForumPosts extends Component {
 
   updateWindowDimensions() {
 
-    if(window.innerWidth < 450 && this.state.updatedButtons === false){
+    if(window.innerWidth < 500 && this.state.updatedButtons === false){
       this.setState({
         updatedButtons: true,
       });
@@ -107,9 +107,12 @@ class ForumPosts extends Component {
       if(document.getElementsByClassName('forum_button')[0].style.display == 'inline-block'){
         document.getElementsByClassName('mobile_forum')[0].style.display = 'inline-block';
       }
+
+      document.getElementsByClassName('send_button')[0].style.display = 'none';
+      document.getElementsByClassName('mobile_send')[0].style.display = 'inline-block';
     }
 
-    if(window.innerWidth > 450 && this.state.updatedButtons === false){
+    if(window.innerWidth > 500 && this.state.updatedButtons === false){
       this.setState({
         updatedButtons: true,
       });
@@ -118,6 +121,9 @@ class ForumPosts extends Component {
           document.getElementsByClassName('mobile_forum')[0].style.display = 'none';
           document.getElementsByClassName('forum_button')[0].style.display = 'inline-block';
       }
+
+      document.getElementsByClassName('send_button')[0].style.display = 'block';
+      document.getElementsByClassName('mobile_send')[0].style.display = 'none';
     }
 
     this.setState({
@@ -137,6 +143,11 @@ class ForumPosts extends Component {
 
       var firstName = snapshot.val().fname;
       let msg = document.getElementById('outlined-multiline-static'+postsName).value;
+
+      if(msg.length <= 0){
+        alert('Can\'t send empty messages!');
+        return;
+      }
 
 
       var currentdate = new Date();
@@ -170,12 +181,7 @@ class ForumPosts extends Component {
       });
 
       document.getElementById('outlined-multiline-static'+postsName).value = "";
-
-      document.getElementsByClassName('aws-btn--medium')[0].style.display = "none";
-      setTimeout(() => {
-        document.getElementsByClassName('aws-btn--medium')[0].style.display = "block";
-      }, 3000);
-
+      document.getElementsByClassName('num_chars')[0].innerHTML = 300;
     });
 
     this.scrollToBottom();
@@ -220,6 +226,7 @@ class ForumPosts extends Component {
               Send
             </AwesomeButton>
           </div>
+
           <div class="scroll_button">
             <AwesomeButton
               size="small"
@@ -233,6 +240,18 @@ class ForumPosts extends Component {
             >
               <b>V</b>
             </AwesomeButton>
+          </div>
+
+          <button class="mobile_bot mobile_scroll" onClick={this.scrollToBottom}>
+            <FontAwesomeIcon id="" size="md" icon={faAngleDoubleDown} />
+          </button>
+          <button class="mobile_bot mobile_send" onClick={this.sendMessage.bind(this)}>
+            <FontAwesomeIcon id="" size="sm" icon={faEnvelope} /> SEND
+          </button>
+
+          <div class="if_mobile2"><br/><br/><br/></div>
+          <div>
+            <div class="after_num">characters left</div><div class="num_chars" id={"num_chars" + this.props.subject}>300</div>
           </div>
         </div>
       </div>

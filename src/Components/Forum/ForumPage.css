@@ -15,6 +15,21 @@ font-family: 'Fredericka the Great', cursive;
 font-family: 'IM Fell Great Primer', serif;
 */
 
+.after_num {
+  float: right;
+  font-size: 30px;
+  font-family: 'Fredericka the Great', cursive;
+  padding-top: 15px;
+  margin-right: 10px;
+}
+
+.num_chars {
+  float: right;
+  font-size: 50px;
+  margin-right: 10px;
+  font-family: 'Fredericka the Great', cursive;
+}
+
 #root > div > div > div > button {
   margin-top: 2.5px !important;
   margin-bottom: 0px !important;
@@ -327,7 +342,7 @@ font-family: 'IM Fell Great Primer', serif;
   margin-left: 10px;
 }
 
-.mobile_home, .mobile_forum {
+.mobile_home, .mobile_forum, .mobile_send, .mobile_scroll {
   padding-right: 5px;
   padding-left: 5px;
   font-size: 18px;
@@ -338,7 +353,7 @@ font-family: 'IM Fell Great Primer', serif;
   margin-left: 15px;
 }
 
-.mobile_home, .mobile_forum {
+.mobile_home, .mobile_forum, .mobile_send, .mobile_scroll {
 	box-shadow:inset 0px -3px 7px 0px #3498eb;
 	background:linear-gradient(to bottom, #3498eb 5%, #0688fa 100%);
 	background-color:#2dabf9;
@@ -350,11 +365,11 @@ font-family: 'IM Fell Great Primer', serif;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.mobile_home:hover, .mobile_forum:hover {
+.mobile_home:hover, .mobile_forum:hover, .mobile_send:hover, , .mobile_scroll:hover {
 	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
 	background-color:#0688fa;
 }
-.mobile_home:active, .mobile_forum:active {
+.mobile_home:active, .mobile_forum:active, .mobile_send:active, .mobile_scroll:active {
 	position:relative;
 	top:1px;
 }
@@ -371,7 +386,113 @@ font-family: 'IM Fell Great Primer', serif;
   display: none;
 }
 
+.if_mobile2 {
+  display: none;
+}
+
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'IM Fell Great Primer', serif;
+*/
+
+.mobile_send, .mobile_scroll {
+  display: none;
+}
+
+@media only screen and (max-width: 650px){
+
+  .post_mapper {
+    width: 100%;
+    padding-left: 2.5px;
+  }
+
+  .post_outer {
+    width: 97%;
+  }
+
+  .after_num {
+    padding-top: 25px;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+  }
+
+  .num_chars {
+    padding-top: 25px;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    margin-right: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+  .forum_button {
+    display: none !important;
+  }
+
+  .return_button {
+    display: none !important;
+  }
+
+  .mobile_home {
+    display: inline;
+  }
+
+  .SHRINK {
+    display: block;
+  }
+
+  .send_button, .scroll_button {
+    display: none;
+  }
+
+  .mobile_send, .mobile_scroll {
+    margin-top: 25px;
+    display: inline-block;
+    float: right;
+  }
+  .mobile_send {
+    margin-right: 5px;
+  }
+  .mobile_scroll {
+    margin-right: 35px;
+  }
+
+  .after_num {
+  }
+}
+
 @media only screen and (max-width: 450px){
+  .mobile_send, .mobile_scroll {
+    margin-top: 5px;
+  }
+
+  .input_holder {
+    margin-top: 5px;
+  }
+  .after_num {
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+  }
+
+  .num_chars {
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: 'Play', sans-serif;
+    margin-right: 5px;
+  }
+
+
   .if_mobile {
     display: block;
   }
@@ -418,22 +539,6 @@ font-family: 'IM Fell Great Primer', serif;
     --button-default-font-size: 20px !important;
     margin-left: 2px !important;
     margin-right: 2px !important;
-  }
-
-  .forum_button {
-    display: none !important;
-  }
-
-  .return_button {
-    display: none !important;
-  }
-
-  .mobile_home {
-    display: inline;
-  }
-
-  .SHRINK {
-    display: block;
   }
 
   .outer_posts {
