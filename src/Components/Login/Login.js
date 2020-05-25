@@ -133,6 +133,8 @@ export default function Login() {
 
         // Setup profile data for account
         setupDatabase(fname, lname, email);
+
+        profileType = null;
     }
 
     function setupDatabase(fname, lname, email){
