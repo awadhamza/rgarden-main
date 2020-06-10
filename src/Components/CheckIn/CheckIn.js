@@ -16,8 +16,8 @@ var mockTop = 33.831398;
 var mockBot = 33.831261;
 var mockRight = -118.026065;
 
-//   33.8231156
-// -118.0303074
+//    33.831261 >   33.8312513 <   33.831398
+//  -118.026178 < -118.0261281 < -118.026065
 
 function handlePermissions() {
   navigator.permissions.query({name:'geolocation'}).then(function(result) {
@@ -49,15 +49,15 @@ export default class Checkin extends Component {
     let longitude = position.coords.longitude;
     let latitude = position.coords.latitude;
 
-    if((leftLon > longitude && longitude > rightLon) && (botLat < latitude && latitude < topLat)){
+    if((leftLon < longitude && longitude < rightLon) && (botLat > latitude && latitude < topLat)){
       document.getElementsByClassName('Clocation')[0].innerHTML = "Location requirement:<div id='loc_color'><i>&nbsp;Complete</i></div>";
       document.getElementById("loc_color").style.color = "green";
-      //alert('SUCCESS: TELL HAMZA UR AT THE GARDEN');
+      // alert('SUCCESS: TELL HAMZA UR AT THE GARDEN');
     } else {
 
       document.getElementsByClassName('Clocation')[0].innerHTML = "Location requirement:<div id='loc_color'><i>&nbsp;Incomplete</i></div>";
       document.getElementById("loc_color").style.color = "red";
-      //alert('It says you are not at the garden. I hope not.')
+      // alert('It says you are not at the garden. I hope that is the case.')
     }
 
   }
@@ -66,10 +66,10 @@ export default class Checkin extends Component {
     let longitude = position.coords.longitude;
     let latitude = position.coords.latitude;
 
-    if((mockLeft > longitude && longitude > mockRight) && (mockBot < latitude && latitude < mockTop)){
+    if((mockLeft < longitude && longitude < mockRight) && (mockBot > latitude && latitude < mockTop)){
       document.getElementsByClassName('Clocation')[0].innerHTML = "Location requirement:<div id='loc_color'><i>&nbsp;Complete</i></div>";
       document.getElementById("loc_color").style.color = "green";
-      alert('SUCCESS: TELL HAMZA UR AT THE GARDEN');
+      // alert('You are INFRONT OF THE HOUSE!');
     } else {
 
       document.getElementsByClassName('Clocation')[0].innerHTML = "Location requirement:<div id='loc_color'><i>&nbsp;Incomplete</i></div>";
@@ -84,8 +84,8 @@ export default class Checkin extends Component {
   }
 
   showPosition(position) {
-    //this.verifyPosition(position);
-    this.verifyMock(position);
+    this.verifyPosition(position);
+    //this.verifyMock(position);
 
     document.getElementById("Response").innerHTML = "Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
@@ -98,6 +98,7 @@ export default class Checkin extends Component {
     } else {
       document.getElementById("Response").innerHTML = "Geolocation is not supported by this browser.";
     }
+    
   }
 // <iframe class="to_mid" src="https://docs.google.com/forms/d/e/1FAIpQLScvjeO_AuYTGzqcv_6G0at7u4vEizf-DAEi1nG-eh2dtx-IKw/viewform?embedded=true" width="640" height="546" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   render() {
@@ -131,8 +132,9 @@ export default class Checkin extends Component {
         </div>
 
         <div id="Response">Launch Geolocation:</div>
-        <button onClick={this.getLocation}>Try It</button>
+        <button id="loc_button" onClick={this.getLocation}>Locate Me</button>
         <br/>
+
         </div>
     );
   }
