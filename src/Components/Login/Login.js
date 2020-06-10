@@ -132,12 +132,12 @@ export default function Login() {
         });
 
         // Setup profile data for account
-        setupDatabase(fname, lname, email);
+        setupDatabase(fname, lname, email, profileType);
 
         profileType = null;
     }
 
-    function setupDatabase(fname, lname, email){
+    function setupDatabase(fname, lname, email, pt){
       firebase.auth().onAuthStateChanged(function(user) {
         if(user){
           var memRef = firebase.database().ref('users/' + user.uid);
@@ -145,7 +145,7 @@ export default function Login() {
             email: email,
             fname: fname,
             lname: lname,
-            profile: profileType,
+            profile: pt,
           });
         }
       });

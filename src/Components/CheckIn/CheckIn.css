@@ -1,14 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Dosis|Indie+Flower|Play|Righteous|Roboto|Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=IM+Fell+Great+Primer&family=Montserrat&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sen', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Anton', sans-serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Play', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'IM Fell Great Primer', serif;
+*/
+
+.top_checkin button {
+  width: 100px;
+  height: 75px;
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Checkin_Req {
+  color: navy;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+
+  background-color: rgba(252, 252, 252,0.9);
+
+  padding: 30px;
+  border-radius: 55px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 50%;
+}
+
+.Checkin_Req > div {
+  display: inline-block;
+}
+
+#form_color, #loc_color {
+  display: inline-block;
+}
+
+.Clocation > div, .Cform > div {
+  color: purple;
+}
+
+.subtitle_top {
+  color: navy;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+
+  background-color: rgba(252, 252, 252,0.9);
+
+  padding: 30px;
+  border-radius: 35px;
+  display: inline-block;
+}
+
+.inline_top {
+  margin-top: 15px;
+}
+
+.inline_bot {
+  margin-bottom: 15px;
+}
+
+.title_top {
+  font-size: 100px;
+  letter-spacing: 5px;
+  color: white;
+  font-family: 'Righteous', cursive;
+  background-color: rgba(252, 219, 3,0.9);
+  width: 100%;
+  text-shadow: 2px 2px black;
+  padding: 0 15px 0 15px;
+  border-radius: 35px;
+
+  display: inline;
+}
+
+#Response {
+  color: white;
+  padding: 15px;
+  font-size: 24px;
+}
+
 .to_mid {
   padding-top: 20px;
   margin: 0 auto;
 }
 
-.top {
+.top_checkin {
   text-align: center;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 1050px){
+  .top_checkin {
+    margin-top: 150px;
+  }
+
   iframe {
     width: 100vw;
+  }
+}
+@media only screen and (max-width: 450px){
+  .title_top {
+    font-size: 45px !important;
+  }
+
+  .subtitle_top {
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 7.5px;
+  }
+
+  .subtitle_top > p {
+    margin-bottom: 5px;
+  }
+
+  .Checkin_Req {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    padding: 7.5px;
   }
 }

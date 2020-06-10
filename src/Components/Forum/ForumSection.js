@@ -57,10 +57,6 @@ export default function Forumsection(props) {
     }
   }
 
-  function relaxSend(){
-    alert('hi');
-  }
-
   function changeColors(color){
     document.getElementsByClassName("num_chars")[0].style.color = color;
     document.getElementsByClassName("after_num")[0].style.color = color;

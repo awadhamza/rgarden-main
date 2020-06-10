@@ -29,9 +29,9 @@ font-family: 'Play', sans-serif;
 .secret_formula {
   display: none;
   position: absolute;
-  background-color: rgba(39, 83, 171,0.3);
+  background-color: rgba(39, 83, 171,0.90);
   padding: 20px;
-  top: 120px;
+  top: 117px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 50px;
 }
